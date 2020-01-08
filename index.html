@@ -1,47 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<link rel="shortcut icon" type="image/png" href="./favicon.png"/>
-	<title>Sample notification API</title>
-	<link rel="stylesheet" href="">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" type="image/png" href="./favicon.png"/>
+    <title>Sample notification API</title>
+    <link rel="stylesheet" href="">
 </head>
 <body>
-	<!-- The core Firebase JS SDK is always required and must be listed first -->
-	<!-- <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script> -->
-	<!-- <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-messaging.js"></script> -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-messaging.js"></script>
 
-	<!-- TODO: Add SDKs for Firebase products that you want to use
-	     https://firebase.google.com/docs/web/setup#available-libraries -->
-	<!-- <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-analytics.js"></script> -->
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-analytics.js"></script>
 
-	<script>
-	  // Your web app's Firebase configuration
-	  // var firebaseConfig = {
-	  //   apiKey: "AIzaSyCrZgvDbAxRJWmMe0NissmEBPUPFHFdYi4",
-	  //   authDomain: "fir-notification-shiksha.firebaseapp.com",
-	  //   databaseURL: "https://fir-notification-shiksha.firebaseio.com",
-	  //   projectId: "fir-notification-shiksha",
-	  //   storageBucket: "fir-notification-shiksha.appspot.com",
-	  //   messagingSenderId: "457820145376",
-	  //   appId: "1:457820145376:web:6b3b21e0a23f4d2f373285",
-	  //   measurementId: "G-PDDL5QV3C4"
-	  // };
-	  // // // Initialize Firebase
-	  // firebase.initializeApp(firebaseConfig);
-	  // firebase.analytics();
-	</script>
-	<script src="notification-service.js"></script>
-	<script>
-		/* serverPublicKey: 'BJdpxo6AaBkFtqlODWpxb-ELSmntQvro35GI7niGxfeAAUDh-X9yhgv8WYQiruTs8pbIWwOSCQl1aJLqaej_ims',
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+          apiKey: "AIzaSyC92ikuZxcqadaCOksglaSP4MquKnFnE7Y",
+          authDomain: "shiksha-f9687.firebaseapp.com",
+          databaseURL: "https://shiksha-f9687.firebaseio.com",
+          projectId: "shiksha-f9687",
+          storageBucket: "shiksha-f9687.appspot.com",
+          messagingSenderId: "947477020965",
+          appId: "1:947477020965:web:e2482b2d5d00496d869acc",
+          measurementId: "G-PDDL5QV3C4"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+    <script src="notification-service-minified.js"></script>
+    <script>
+        /* serverPublicKey: 'BJdpxo6AaBkFtqlODWpxb-ELSmntQvro35GI7niGxfeAAUDh-X9yhgv8WYQiruTs8pbIWwOSCQl1aJLqaej_ims',
 
-			messaging: firebase.messaging(), */
-		var config = {
-			workerFilePath: './notification-worker.js',
-			serverPublicKey: 'BCa7ZBe3p2hxDQEJN05ZZ2qDxSghmBCY_obuEHTQoouqxmJ4Znm_C7g0rzLbY3hxLJEgk8siibsqj7qUL4jHNBg'
-		}
-		var Notify = new Notification(config);
-	</script>
+            messaging: firebase.messaging(), */
+        var config = {
+            workerFilePath: './notification-worker.js',
+            serverPublicKey: 'BJdpxo6AaBkFtqlODWpxb-ELSmntQvro35GI7niGxfeAAUDh-X9yhgv8WYQiruTs8pbIWwOSCQl1aJLqaej_ims',
+            messaging: firebase.messaging()
+        }
+        var Notify = new PushNotification(config);
+    </script>
 </body>
 </html>
